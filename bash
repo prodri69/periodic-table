@@ -45,3 +45,15 @@ ALTER TABLE properties
 #You should capitalize the first letter of all the symbol values in the elements table. Be careful to only capitalize the letter and not change any others
 UPDATE elements SET symbol = INITCAP(symbol);
 
+#You should remove all the trailing zeros after the decimals from each row of the atomic_mass column. You may need to adjust a data type to DECIMAL for this. The final values they should be are in the atomic_mass.txt file
+ALTER TABLE properties ALTER COLUMN atomic_mass SET DATA TYPE DECIMAL(5);
+ALTER TABLE properties ALTER COLUMN atomic_mass SET DATA TYPE DECIMAL;
+
+#You should add the element with atomic number 9 to your database. Its name is Fluorine, symbol is F, mass is 18.998, melting point is -220, boiling point is -188.1, and it's a nonmetal
+INSERT INTO elements(atomic_number, symbol, name) VALUES(9, 'F', 'Fluorine');
+INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(9, 'nonmetal', 18.988, -220, -188.1, 1);
+
+#You should add the element with atomic number 10 to your database. Its name is Neon, symbol is Ne, mass is 20.18, melting point is -248.6, boiling point is -246.1, and it's a nonmetal
+INSERT INTO elements(atomic_number, symbol, name) VALUES(10, 'Ne', 'Neon');
+INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(10, 'nonmetal', 20.18, -248.6, -246.1, 1);
+
