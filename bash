@@ -41,3 +41,7 @@ VALUES
 #Your properties table should have a type_id foreign key column that references the type_id column from the types table. It should be an INT with the NOT NULL constraint
 ALTER TABLE properties
    ADD COLUMN type_id INT NOT NULL DEFAULT 1 REFERENCES types(type_id);
+
+#You should capitalize the first letter of all the symbol values in the elements table. Be careful to only capitalize the letter and not change any others
+UPDATE elements SET symbol = INITCAP(symbol);
+
