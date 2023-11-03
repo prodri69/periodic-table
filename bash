@@ -12,12 +12,13 @@ ALTER TABLE properties ALTER COLUMN melting_point_celsius SET NOT NULL;
 ALTER TABLE properties ALTER COLUMN boiling_point_celsius SET NOT NULL;
 
 #You should add the UNIQUE constraint to the symbol and name columns from the elements table
-ALTER TABLE elements ADD CONSTRAINT unique_symbol UNIQUE (symbol);
-ALTER TABLE elements ADD CONSTRAINT unique_name UNIQUE (name);
-
 #Your symbol and name columns should have the NOT NULL constraint
-ALTER TABLE elements ALTER COLUMN symbol SET NOT NULL;
-ALTER TABLE elements ALTER COLUMN name SET NOT NULL;
+
+ALTER TABLE elements
+   ADD CONSTRAINT unique_symbol UNIQUE (symbol),
+   ADD CONSTRAINT unique_name UNIQUE (name),
+   ALTER COLUMN symbol SET NOT NULL,
+   ALTER COLUMN name SET NOT NULL;
 
 #You should set the atomic_number column from the properties table as a foreign key that references the column of the same name in the elements table
 ALTER TABLE properties ADD FOREIGN KEY (atomic_number)  REFERENCES elements(atomic_number);
@@ -38,5 +39,5 @@ VALUES
     (3, 'metalloid');
 
 #Your properties table should have a type_id foreign key column that references the type_id column from the types table. It should be an INT with the NOT NULL constraint
-ALTER TABLE properties ADD COLUMN type_id INT;
-ALTER TABLE properties ALTER COLUMN type_id SET NOT NULL ;
+ALTER TABLE properties
+   ADD COLUMN type_id INT NOT NULL DEFAULT 1 REFERENCES types(type_id);
