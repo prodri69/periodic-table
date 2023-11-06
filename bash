@@ -67,8 +67,10 @@ git branch main
 git checkout main
 
 #Your periodic_table repo should have at least five commits
+#The message for the first commit in your repo should be Initial commit
+#The rest of the commit messages should start with fix:, feat:, refactor:, chore:, or test:
 git add file.txt
-git commit -m "First commit"
+git commit -m "Initial commit"
 git add file.txt
 git commit -m "Second commit"
 git add file.txt
@@ -84,6 +86,10 @@ touch element.sh
 #Your script (.sh) file should have executable permissions
 chmod +x element.sh
 
+#You should delete the non existent element, whose atomic_number is 1000, from the two tables
+#Crear dos commits donde dos son fix, uno para cada tabla 
 
+#Your properties table should not have a type column
+#crear un comit donde se elimina esta columna
 
-
+#You should finish your project while on the main branch. Your working tree should be clean and you should not have any uncommitted changes
