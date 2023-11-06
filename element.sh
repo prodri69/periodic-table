@@ -14,5 +14,5 @@ EL_TYPE=$($PSQL "SELECT type FROM types JOIN properties ON types.type_id = prope
 EL_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = $EL_NUM")
 EL_MELT=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = $EL_NUM");
 EL_BOIL=$($PSQL "SELECT boling_point_celsius FROM properties WHERE atomic_number = $EL_NUM");
+echo -e "\nThe element with atomic number $EL_NUM is $EL_NAME ($EL_SYM). 'It''s' a $EL_TYPE, with a mass of $EL_MASS amu. $EL_NAME has a melting point of $EL_MELT celsius and a boiling point of $EL_BOIL celsius."
 
-echo -e "\nThe element with atomic number "$EL_NUM" is $EL_NAME" ("$EL_SYM"). 'It\'s' a "$EL_TYPE", with a mass of "$EL_MASS" amu. "$EL_NAME" has a melting point of "$EL_MELT" celsius and a boiling point of "$EL_BOIL" celsius.")
