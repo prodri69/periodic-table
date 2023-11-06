@@ -57,3 +57,33 @@ INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, 
 INSERT INTO elements(atomic_number, symbol, name) VALUES(10, 'Ne', 'Neon');
 INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(10, 'nonmetal', 20.18, -248.6, -246.1, 1);
 
+#You should create a periodic_table folder in the project folder and turn it into a git repository with git init
+cd project
+mkdir periodic_table
+git init
+
+#Your repository should have a main branch with all your commits
+git branch main
+git checkout main
+
+#Your periodic_table repo should have at least five commits
+git add file.txt
+git commit -m "First commit"
+git add file.txt
+git commit -m "Second commit"
+git add file.txt
+git commit -m "Third commit"
+git add file.txt
+git commit -m "fourth commit"
+git add file.txt
+git commit -m "sixth commit"
+
+#You should create an element.sh file in your repo folder for the program I want you to make
+touch element.sh
+
+#Your script (.sh) file should have executable permissions
+chmod +x element.sh
+
+
+
+
