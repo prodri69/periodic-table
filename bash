@@ -51,7 +51,7 @@ ALTER TABLE properties ALTER COLUMN atomic_mass SET DATA TYPE DECIMAL;
 
 #You should add the element with atomic number 9 to your database. Its name is Fluorine, symbol is F, mass is 18.998, melting point is -220, boiling point is -188.1, and it's a nonmetal
 INSERT INTO elements(atomic_number, symbol, name) VALUES(9, 'F', 'Fluorine');
-INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(9, 'nonmetal', 18.988, -220, -188.1, 1);
+INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(9, 'nonmetal', 18.998, -220, -188.1, 1);
 
 #You should add the element with atomic number 10 to your database. Its name is Neon, symbol is Ne, mass is 20.18, melting point is -248.6, boiling point is -246.1, and it's a nonmetal
 INSERT INTO elements(atomic_number, symbol, name) VALUES(10, 'Ne', 'Neon');
