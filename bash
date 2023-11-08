@@ -58,13 +58,12 @@ INSERT INTO elements(atomic_number, symbol, name) VALUES(10, 'Ne', 'Neon');
 INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(10, 'nonmetal', 20.18, -248.6, -246.1, 1);
 
 #You should create a periodic_table folder in the project folder and turn it into a git repository with git init
-cd project
 mkdir periodic_table
+cd periodic_table/
 git init
 
 #Your repository should have a main branch with all your commits
-git branch main
-git checkout main
+git checkout -b main
 
 #Your periodic_table repo should have at least five commits
 #The message for the first commit in your repo should be Initial commit
@@ -87,9 +86,12 @@ touch element.sh
 chmod +x element.sh
 
 #You should delete the non existent element, whose atomic_number is 1000, from the two tables
-#Crear dos commits donde dos son fix, uno para cada tabla 
+DELETE FROM properties WHERE atomic_number = 1000;
+DELETE FROM elements WHERE atomic_number = 1000;
+ 
 
 #Your properties table should not have a type column
-#crear un comit donde se elimina esta columna
+ALTER TABLE properties DROP COLUMN type
+
 
 #You should finish your project while on the main branch. Your working tree should be clean and you should not have any uncommitted changes
