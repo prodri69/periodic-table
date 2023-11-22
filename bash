@@ -65,25 +65,7 @@ git init
 #Your repository should have a main branch with all your commits
 git checkout -b main
 
-#Your periodic_table repo should have at least five commits
-#The message for the first commit in your repo should be Initial commit
-#The rest of the commit messages should start with fix:, feat:, refactor:, chore:, or test:
-git add file.txt
-git commit -m "Initial commit"
-git add file.txt
-git commit -m "Second commit"
-git add file.txt
-git commit -m "Third commit"
-git add file.txt
-git commit -m "fourth commit"
-git add file.txt
-git commit -m "sixth commit"
 
-#You should create an element.sh file in your repo folder for the program I want you to make
-touch element.sh
-
-#Your script (.sh) file should have executable permissions
-chmod +x element.sh
 
 #You should delete the non existent element, whose atomic_number is 1000, from the two tables
 DELETE FROM properties WHERE atomic_number = 1000;
